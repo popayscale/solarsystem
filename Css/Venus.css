@@ -1,0 +1,72 @@
+.Venus::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400%;
+    background-image: url(../img/venus.png);
+}
+
+.item--sphere2 {
+    border-radius: 80%;
+    transform: rotate(177deg);
+}
+
+.Venus {
+    color: #bebebeaf;
+}
+
+.Venus:hover {
+    transform: scale(1.05);
+    transform: rotate(177deg);
+}
+
+.item:hover.Venus::before,
+.item:hover.Venus::after {
+    -webkit-animation: spin-round-droite 3.5s linear infinite;
+    animation: spin-round-droite 3.5s linear infinite;
+}
+
+
+
+@-webkit-keyframes spin-round-gauche {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes spin-round-gauche {
+    from {
+        transform: translateX(0%);
+
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* Styles pour les petits appareils en mode paysage */
+@media (max-width: 768px) and (orientation: landscape) {
+   
+  
+    .item--sphere2 {
+      transform: scale(0.7) rotate(177deg); /* Réduit la taille de 20% et applique la rotation */
+    }
+  
+    .Venus:hover {
+      transform: scale(0.75) rotate(177deg); /* Réduit la taille de 15% au survol et applique la rotation */
+    }
+  
+    .item:hover.Venus::before,
+    .item:hover.Venus::after {
+      -webkit-animation: spin-round-droite 3.5s linear infinite;
+      animation: spin-round-droite 3.5s linear infinite;
+    }
+  }
+  

@@ -1,0 +1,62 @@
+.Saturne::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 400%;
+    background-image: url(../img/saturne.png);
+}
+
+.item--sphere6 {
+    border-radius: 80%;
+    transform: rotate(27deg);
+}
+
+.Saturne {
+    color: #eef08c;
+}
+
+.Saturne:hover {
+    transform: scale(1.05);
+    transform: rotate(27deg);
+}
+
+.item:hover.Saturne::before,
+.item:hover.Saturne::after {
+    -webkit-animation: spin-round-droite 3.5s linear infinite;
+    animation: spin-round-droite 3.5s linear infinite;
+}
+
+
+@-webkit-keyframes spin-round-droite {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes spin-round-droite {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+/* Styles pour les petits appareils en mode paysage */
+@media (max-width: 768px) and (orientation: landscape) {
+    .item--sphere6 {
+      transform: scale(0.7); /* Réduit la taille de 30% */
+    }
+  
+    .Saturne:hover {
+      transform: scale(0.75); /* Réduit la taille de 25% au survol */
+    }
+  }
+  

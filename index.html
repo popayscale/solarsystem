@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Css/Accueil.css" />
+    <link rel="stylesheet" href="Css/Mercure.css" />
+    <link rel="stylesheet" href="Css/Venus.css" />
+    <link rel="stylesheet" href="Css/Terre.css" />
+    <link rel="stylesheet" href="Css/Mars.css" />
+    <link rel="stylesheet" href="Css/Jupiter.css" />
+    <link rel="stylesheet" href="Css/Saturne.css" />
+    <link rel="stylesheet" href="Css/Neptune.css" />
+    <link rel="stylesheet" href="Css/Uranus.css" />
+    <link rel="stylesheet" href="Css/Terre.css" />
+    <title>Accueil</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <header>Le système solaire</header>
+    <p>
+      <span class="zoom-text">&#8595;</span> Cliquez sur une planète pour en apprendre plus. <span class="zoom-text">&#8595;</span>
+    </p>
+    <div class="image-container">
+      <div class="milky"></div>
+    </div>
+    <section id="noms"></section>
+    <div class="container">
+      <a
+        class="item item--sphere1 Mercure"
+        href="https://fr.wikipedia.org/wiki/Mercure_(planète)"
+        target="_blank"
+        data-name="  ☿ Mercure"
+      ></a>
+      <a
+        class="item item--sphere2 Venus"
+        href="https://fr.wikipedia.org/wiki/Vénus_(planète)"
+        target="_blank"
+        data-name="  ♀ Vénus"
+      ></a>
+      <a
+        class="item item--sphere3 Terre"
+        href="https://fr.wikipedia.org/wiki/Terre_(planète)"
+        target="_blank"
+        data-name="   ♁ Terre"
+      ></a>
+      <a
+        class="item item--sphere4 Mars"
+        href="https://fr.wikipedia.org/wiki/Mars_(planète)"
+        target="_blank"
+        data-name="   ♂ Mars"
+      ></a>
+      <a
+        class="item item--sphere5 Jupiter"
+        href="https://fr.wikipedia.org/wiki/Jupiter_(planète)"
+        target="_blank"
+        data-name="   ♃ Jupiter"
+      ></a>
+      <a
+        class="item item--sphere6 Saturne"
+        href="https://fr.wikipedia.org/wiki/Saturne_(planète)"
+        target="_blank"
+        data-name="   ♄ Saturne"
+      ></a>
+      <a
+        class="item item--sphere7 Uranus"
+        href="https://fr.wikipedia.org/wiki/Uranus_(planète)"
+        target="_blank"
+        data-name="  ⛢ Uranus"
+      ></a>
+      <a
+        class="item item--sphere8 Neptune"
+        href="https://fr.wikipedia.org/wiki/Neptune_(planète)"
+        target="_blank"
+        data-name="  ♆ Neptune"
+      ></a>
+    </div>
+    <div id="icon_1" class="icon-module">
+      <img class="icon-image" src="img/acc/hubble.png" alt="hubble">
+    </div>
+    <div id="icon-2" class="icon-module">
+      <img class="icon-image" src="img/acc/iss.png" alt="iss">
+    </div>
+    <div id="icon-3" class="icon-module">
+      <img class="icon-image" src="img/acc/jwst.png" alt="jwst">
+    </div>
+    <script src="star.js"></script>
+    <script src="name.js"></script>
+    <script src="modules.js"></script>
+  </body>
+</html>

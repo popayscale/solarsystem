@@ -1,0 +1,63 @@
+.Uranus::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 400%;
+    width: 100%;
+    background-image: url(../img/uranus.png);
+}
+
+.item--sphere7 {
+    border-radius: 80%;
+    transform: rotate(5deg);
+}
+
+.Uranus {
+    color: #3ec0e7;
+}
+
+.Uranus:hover {
+    transform: scale(1.05);
+    transform: rotate(5deg)
+}
+
+.item:hover.Uranus::before,
+.item:hover.Uranus::after {
+    -webkit-animation: scroll-up-down 3.5s linear infinite;
+    animation: scroll-up-down 3.5s linear infinite;
+}
+
+
+
+@-webkit-keyframes scroll-up-down {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes scroll-up-down {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-50%);
+    }
+}
+/* Styles pour les petits appareils en mode paysage */
+@media (max-width: 768px) and (orientation: landscape) {
+    .item--sphere7 {
+      transform: scale(0.7); /* Réduit la taille de 30% */
+    }
+  
+    .Uranus:hover {
+      transform: scale(0.75); /* Réduit la taille de 25% au survol */
+    }
+  }
+  
