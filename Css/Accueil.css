@@ -12,10 +12,10 @@ body {
     align-items: center;
     background-color: black;
     min-height: 100vh;
-    min-width: 100vh;    
+    min-width: 100vh;
     overflow-x: hidden;
-
 }
+
 .icon-module {
   position: absolute;
   pointer-events: none;
@@ -28,8 +28,6 @@ body {
   width: 64px; /* Taille d'une icône */
   height: auto;
 }
-
-
 
 header {
     text-transform: uppercase;
@@ -48,12 +46,11 @@ header {
     opacity: 0;
 }
 
-
 .image-container {
   position: absolute;
   top: 0%;
   width: 100vw;
-  height:100vw;
+  height: 100vw;
   overflow: hidden;
   z-index: -3;
 }
@@ -61,7 +58,7 @@ header {
 .milky {
   position: absolute;
   left: 50%;
-  top:25%;
+  top: 25%;
   transform: translate(-50%, -50%);
   width: 40%;
   height: 40%;
@@ -81,39 +78,34 @@ header {
   }
 }
 
-
 .uppercase {
     text-transform: uppercase;
     font-size: 5rem;
     font-weight: bold;
     color: #ffffff;
-  }
-  
+}
 
 p {
     text-align: center;
     font-size: xx-large;
     margin-top: 30%;
-
 }
-
 
 .zoom-text {
     display: inline-block;
     animation: zoomInOut 2s infinite alternate;
-  }
-  
-  @keyframes zoomInOut {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(2);
-    }
-  }
-  
+}
 
-  #noms {
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(2);
+  }
+}
+
+#noms {
     color: white;
     font-size: 24px;
     text-align: center;
@@ -133,9 +125,9 @@ p {
     margin-top: 6%;
     padding: 0;
     justify-content: center;
-    overflow: auto;
+    overflow: hidden; /* Empêche l'apparition du curseur de défilement */
+    max-width: 100vw; /* Assure que le conteneur ne dépasse pas la largeur de la fenêtre */
 }
-
 
 .item {
     position: relative;
@@ -155,12 +147,10 @@ p {
     -webkit-tap-highlight-color: transparent;
 }
 
-
 @keyframes milky {
     0% {
         transform: rotateX(-50deg) rotate(0deg);
     }
-
     100% {
         transform: rotateX(-50deg) rotate(360deg);
     }
@@ -168,12 +158,11 @@ p {
 
 /* Styles pour les petits appareils en mode portrait */
 @media (max-width: 768px) and (orientation: portrait) {
-
   .image-container {
-margin-top: 50%;
-margin-left: 50%;
+    margin-top: 50%;
+    margin-left: 50%;
   }
-  .milky{
+  .milky {
     width: 45%;
     height: 45%;
   }
